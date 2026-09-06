@@ -1,0 +1,14 @@
+# Dependências (O mais importante)
+node_modules/
+
+# Pastas geradas durante o build (quando você for publicar o site)
+dist/
+dist-ssr/
+
+# Arquivos de variáveis de ambiente que não devem vazar
+.env
+.env.local
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
