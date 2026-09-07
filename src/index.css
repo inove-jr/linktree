@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Minha-fonte';
+  src: url(./assets/fonts/Kanit-Bold.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Minha-fonte-dois';
+  src: url(./assets/fonts/Kanit-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Minha-font-tres';
+  src: url(./assets/fonts/Prime-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+p{
+  font-family: 'Minha-fonte-dois', serif;
+}
+
+a{
+  font-family: 'Minha-font-tres', sans-serif;
+}
