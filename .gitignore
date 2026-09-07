@@ -1,14 +1,24 @@
-# Dependências (O mais importante)
-node_modules/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Pastas geradas durante o build (quando você for publicar o site)
-dist/
-dist-ssr/
+node_modules
+dist
+dist-ssr
+*.local
 
-# Arquivos de variáveis de ambiente que não devem vazar
-.env
-.env.local
-
-# Arquivos temporários do sistema operacional
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
