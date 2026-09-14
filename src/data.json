@@ -1,0 +1,25 @@
+{
+    "redes_sociais": [
+        {
+            "id": 1,
+            "plataforma": "whatsapp", 
+            "url": null, 
+            "icone": "whatsapp.png",
+            "texto": "Entre em contato"
+        },
+        {
+            "id": 2,
+            "plataforma": "inovejr", 
+            "url": null, 
+            "icone": "/povo.png",
+            "texto": "Processo Seletivo"
+        },
+        {
+            "id": 3,
+            "plataforma": "linkedin", 
+            "url": null, 
+            "icone": "linkedin.png",
+            "texto": "Linkedin"
+        }
+    ]
+}
