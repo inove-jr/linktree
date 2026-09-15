@@ -1,0 +1,44 @@
+name: Deploy static content to Pages
+
+on: # Definição dos eventos que irão disparar o workflow
+  push: 
+    branches: ['main']
+  
+  workflow_dispatch: # Habilita um botão no GitHub para você rodar essa atualização manualmente quando quiser
+
+permissions: # Permite uma ação que usa GITHUB_TOKEN para
+  contents: read # Que uma ação liste os commits
+  pages: write # Que uma ação faça deploy no GitHub Pages
+  id-token: write # Que uma ação gere um token de identidade para autenticação com o GitHub Pages
+
+concurrency: # Garante que apenas uma execução do workflow será executada por vez, cancelando qualquer execução anterior em andamento
+  group: 'pages' # Pesquisar mais sobre isso...
+  cancel-in-progress: true
+
+jobs: # Definição das tarefas do workflow
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest # Maquina virtual que irá rodar o workflow
+    steps: # Passos/Etapas do workflow
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # Baixa o código do repositório para a máquina virtual
+      - name: Set up Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: lts/*
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
