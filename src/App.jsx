@@ -8,7 +8,7 @@ function App() {
   return(
     <div className='h-screen m-auto flex flex-col justify-center items-center bg-[linear-gradient(180deg,rgba(6,6,79,1)_46%,rgba(6,6,46,1)_100%)]'>
       <div className=" w-[50vh] h-[50vh] flex flex-col gap-[25px]">
-        <img className="h-[20vh] m-auto" src="/linktree/logo.png" alt="" />
+        <img className="h-[20vh] m-auto" src="/logo.png" alt="" />
 
         <p className="text-center text-white">Vem inovar seu futuro com a gente</p>
 
