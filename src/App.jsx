@@ -15,23 +15,16 @@ function App() {
         <div className="flex flex-col gap-[20px] items-center">
           {data.redes_sociais.map((elemento) => 
           <div key={elemento.id}>
-            <button className="relative cursor-pointer bg-white w-[350px] h-[50px] rounded-[10px] flex justify-center items-center">
-              <div className="flex ">
-                  <img className='absolute left-4 top-[12px] w-6 h-6 object-contain' src={elemento.icone} alt={elemento.plataforma}/>
-              </div>
-              <a
-                href={elemento.url}
-                target="_blank"
-                rel='noreferrer'
-                className=""
-              >
-                {elemento.texto}
-              </a>
+            <a href={elemento.url} target="_blank" rel='noreferrer' className="relative cursor-pointer bg-white w-[350px] h-[50px] rounded-[10px] flex justify-center items-center">
+              <img className='absolute left-4 top-[12px] w-6 h-6' src={elemento.icone} alt={elemento.plataforma}/>
 
-            </button>
+                {elemento.texto}
+
+            </a>
           </div>
           )}
         </div>
+
       </div>
     </div>
   );
