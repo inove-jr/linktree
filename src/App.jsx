@@ -4,8 +4,8 @@ import data from './data.json'
 function App() {
 
   return(
-    <div className='h-screen m-auto flex flex-col justify-center items-center bg-[linear-gradient(180deg,rgba(6,6,79,1)_46%,rgba(6,6,46,1)_100%)] sm:h-screen sm:m-auto sm:flex sm:flex-col sm:justify-center sm:items-center sm:bg-[linear-gradient(180deg,rgba(6,6,79,1)_46%,rgba(6,6,46,1)_100%)]'>
-      <div className="flex flex-col gap-5 sm:relative sm:flex sm:flex-col sm:gap-5">
+    <div className='w-full aspect-square h-screen m-auto flex flex-col justify-center items-center bg-[linear-gradient(180deg,rgba(6,6,79,1)_46%,rgba(6,6,46,1)_100%)] sm:h-screen sm:m-auto sm:flex sm:flex-col sm:justify-center sm:items-center sm:bg-[linear-gradient(180deg,rgba(6,6,79,1)_46%,rgba(6,6,46,1)_100%)]'>
+      <div className=" w-full aspect-screen flex flex-col gap-5 sm:relative sm:flex sm:flex-col sm:gap-5">
         <img className="h-[15vh] m-auto sm:h-[20vh] sm:m-auto" src="/logo.png" alt="" />
 
         <p className="text-center text-white sm:text-center sm:text-white">Vem inovar seu futuro com a gente</p>
